@@ -1,4 +1,4 @@
-package cJavaObjectOrientedApproach.m2.demo;
+package cJavaObjectOrientedApproach.m3.demo;
 
 import java.util.concurrent.ExecutorService;
 

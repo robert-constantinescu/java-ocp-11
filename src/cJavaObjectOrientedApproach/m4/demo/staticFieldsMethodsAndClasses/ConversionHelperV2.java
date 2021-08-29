@@ -1,4 +1,4 @@
-package cJavaObjectOrientedApproach.m3.demo;
+package cJavaObjectOrientedApproach.m4.demo.staticFieldsMethodsAndClasses;
 
 public final class ConversionHelperV2 {
 

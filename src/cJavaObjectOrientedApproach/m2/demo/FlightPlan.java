@@ -1,4 +1,4 @@
-package cJavaObjectOrientedApproach.m1.demo;
+package cJavaObjectOrientedApproach.m2.demo;
 
 import java.time.LocalDateTime;
 import java.util.List;

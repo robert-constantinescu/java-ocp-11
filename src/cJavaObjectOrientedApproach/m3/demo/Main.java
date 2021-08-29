@@ -1,23 +1,31 @@
 package cJavaObjectOrientedApproach.m3.demo;
 
-import static cJavaObjectOrientedApproach.m3.demo.ConversionHelper.fromNmToMeters;
+import static java.lang.Thread.sleep;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+        //Create radar target
+        RadarTarget os791 = new RadarTarget(
+                "OS791",
+                280,
+                "B737-800"
+        );
 
-        int altitudeInFeet = 28000;
-        double distInNm = 10;
+        System.out.println(os791.getLabel());
+        System.out.println();
 
-        int altitudeInFlightLevel = ConversionHelper.fromFeetToFlightLevel(300);
-        System.out.println(altitudeInFeet + " ft -> FL " + altitudeInFlightLevel);
-
-        double distInMeters = fromNmToMeters(10);
-        System.out.println(distInNm + "Nm ->" + distInMeters + " m");
+        //change altitude command
+        os791.changeAltitude(200);
 
 
-        Calculators.Distance distance = new Calculators.Distance(1, 1, 3, 3);
-        System.out.println("Distance is: " + distance.calculate());
+        //Keep detecting target to see command executed
+        for (int i = 0; i < 5; i++) {
+            sleep(1000);
+            System.out.println(os791.getLabel());
+            System.out.println();
+
+        }
 
     }
 }

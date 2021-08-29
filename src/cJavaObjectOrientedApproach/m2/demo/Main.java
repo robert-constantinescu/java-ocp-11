@@ -1,31 +1,35 @@
 package cJavaObjectOrientedApproach.m2.demo;
 
-import static java.lang.Thread.sleep;
+
+import java.time.LocalDateTime;
+import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException {
-        //Create radar target
-        RadarTarget os791 = new RadarTarget(
-                "OS791",
-                280,
-                "B737-800"
-        );
+    public static void main(String[] args) {
 
-        System.out.println(os791.getLabel());
+        // Partial Flight plan
+
+        FlightPlan berlinToBucharest = new FlightPlan(
+                "BER",
+                "OTP");
+
+        berlinToBucharest.print();
+
         System.out.println();
 
-        //change altitude command
-        os791.changeAltitude(200);
+        //Complete flight plan
 
+        FlightPlan parisToLondon = new FlightPlan(
+                "CDG",
+                "LHR",
+                LocalDateTime.of(2020, 1, 10, 23, 15),
+                List.of("CDG", "FARAR", "BAYKA", "DUDES", "LHR")
+        );
 
-        //Keep detecting target to see command executed
-        for (int i = 0; i < 5; i++) {
-            sleep(1000);
-            System.out.println(os791.getLabel());
-            System.out.println();
-
-        }
+        parisToLondon.print();
 
     }
+
+
 }
