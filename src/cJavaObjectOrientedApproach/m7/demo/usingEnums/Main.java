@@ -24,7 +24,7 @@ public class Main {
         int offset = 0;
 
         for (Aircraft a : aircraft) {
-            offset += takeOffRules.calculateWaitTime(a);
+            offset += a.getWakeTurbulence().getTimeOffSet();
             LocalDateTime depTime = LocalDateTime
                     .now()
                     .plusSeconds(offset);
