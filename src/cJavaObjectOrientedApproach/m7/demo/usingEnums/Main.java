@@ -28,7 +28,7 @@ public class Main {
             LocalDateTime depTime = LocalDateTime
                     .now()
                     .plusSeconds(offset);
-            System.out.println("Aircraft " + a.getModeAOctal() + " takes off at " + depTime.toLocalTime());
+            System.out.println("Aircraft " + a.getModeADecimal() + " takes off at " + depTime.toLocalTime());
         }
     }
 }
