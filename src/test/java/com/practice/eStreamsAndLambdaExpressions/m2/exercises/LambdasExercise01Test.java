@@ -2,8 +2,8 @@ package com.practice.eStreamsAndLambdaExpressions.m2.exercises;
 
 import eStreamsAndLambdaExpressions.m2.exercises.LambdasExercise01;
 import eStreamsAndLambdaExpressions.setup.Product;
-import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -27,7 +27,7 @@ class LambdasExercise01Test {
 
     @Test
     @DisplayName("Exercise 1: Sort products by name")
-    void sortProductsByName() {
+    void sortProductsByName() throws NoSuchFieldException, IllegalAccessException {
         List<Product> products = new ArrayList<>(TEST_PRODUCTS);
 
         exercise.sortProductsByName(products);
