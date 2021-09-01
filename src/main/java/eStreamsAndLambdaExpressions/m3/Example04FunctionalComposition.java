@@ -6,6 +6,7 @@ import eStreamsAndLambdaExpressions.setup.Product;
 
 import java.io.PrintStream;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.BiPredicate;
@@ -41,7 +42,9 @@ public class Example04FunctionalComposition {
                 );
 
 
-
-
+        List<String> test = new ArrayList<>();
+        test.add("12");
+        test.add("13");
+        test.add("15");
     }
 }
