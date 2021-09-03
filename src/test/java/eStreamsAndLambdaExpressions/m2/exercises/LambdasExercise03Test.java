@@ -1,4 +1,4 @@
-package com.practice.eStreamsAndLambdaExpressions.m2.exercises;
+package eStreamsAndLambdaExpressions.m2.exercises;
 
 import eStreamsAndLambdaExpressions.m2.exercises.LambdasExercise03;
 import eStreamsAndLambdaExpressions.setup.Product;
