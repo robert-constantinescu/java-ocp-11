@@ -5,6 +5,8 @@ import eStreamsAndLambdaExpressions.setup.Product;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class LambdasExercise02 {
 
@@ -22,12 +24,21 @@ public class LambdasExercise02 {
     public List<Product> findProductsByCategory(List<Product> products, Category category) {
         // TODO: Implement interface ProductFilter with a lambda expression
         // The lambda expression should return true if the product is in the given category
-        ProductFilter filter = null; // TODO: Replace 'null' by a lambda expression
+        ProductFilter filter = product -> product.getCategory() == category ; // TODO: Replace 'null' by a lambda expression
 
-        List<Product> result = new ArrayList<>();
-        for (Product product : products) {
-            // TODO: Add products that are accepted by the filter to the 'result' list
-        }
+//        List<Product> result = new ArrayList<>();
+//        for (Product product : products) {
+//            // TODO: Add products that are accepted by the filter to the 'result' list
+//            if (filter.accept(product)){
+//                result.add(product);
+//            }
+//        }
+
+        List<Product> result;
+        Predicate<Product> isCategory = product -> product.getCategory() == category;
+        result = products.stream()
+                .filter(isCategory)
+                .collect(Collectors.toList());
 
         return result;
     }
