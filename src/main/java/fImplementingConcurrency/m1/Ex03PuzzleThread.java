@@ -1,4 +1,4 @@
-package fImplementingConcurrency.m1.ConcurrencyAndThreads;
+package fImplementingConcurrency.m1;
 
 public class Ex03PuzzleThread extends Thread {
     @Override
