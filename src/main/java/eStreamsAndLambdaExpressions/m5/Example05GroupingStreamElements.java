@@ -29,6 +29,7 @@ public class Example05GroupingStreamElements {
 
 
         // Challenge! Can you explain exactly how this works?
+        //TODO Can you explain exactly how this works?
         Map<Category, BigDecimal> totalPerCategory = products.stream()
                 .collect(
                         Collectors.groupingBy(
