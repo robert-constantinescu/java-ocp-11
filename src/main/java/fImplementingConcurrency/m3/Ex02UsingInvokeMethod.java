@@ -1,4 +1,4 @@
-package fImplementingConcurrency.m3ExecutorService;
+package fImplementingConcurrency.m3;
 
 import java.util.ArrayList;
 import java.util.List;

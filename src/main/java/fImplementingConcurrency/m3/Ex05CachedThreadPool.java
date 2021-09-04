@@ -1,17 +1,17 @@
-package fImplementingConcurrency.m3ExecutorService;
+package fImplementingConcurrency.m3;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class Ex04FixedThreadPool {
+public class Ex05CachedThreadPool {
 
-    // create a ThreadPool with 3 threads
-    private static ExecutorService fixedThreadPool = Executors.newFixedThreadPool(3);
+    // we can't influence the No. of threads here
+    private static ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
 
     public static Future<Double> getRandomInFuture(int i) {
-        return fixedThreadPool.submit(() -> {
+        return cachedThreadPool.submit(() -> {
             Thread.sleep((int)(Math.random() * 200));
             System.out.println("i = " + i +"     ---------   Thread id: "
                     + Thread.currentThread().getId());
@@ -24,7 +24,6 @@ public class Ex04FixedThreadPool {
             System.out.println(getRandomInFuture(i));
         }
         // always shutdown the executor
-        fixedThreadPool.shutdown();
-
+        cachedThreadPool.shutdown();
     }
 }

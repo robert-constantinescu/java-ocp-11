@@ -1,4 +1,4 @@
-package fImplementingConcurrency.m3ExecutorService;
+package fImplementingConcurrency.m3;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
