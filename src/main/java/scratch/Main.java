@@ -1,5 +1,6 @@
 package scratch;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Main {
@@ -14,12 +15,12 @@ public class Main {
         }
 
         try {
-
-            System.out.println("x");
+            throw new IOException();
         }
-        catch (NumberFormatException ex) { }
-        catch (IllegalArgumentException ex) { }
+        catch (FileNotFoundException ex) { }
         catch (RuntimeException ex) { }
+        catch (IOException ex) { }
+
 
 
     }
