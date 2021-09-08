@@ -1,4 +1,4 @@
-package dExceptionHandling.m1;
+package dExceptionHandling.m2;
 
 public class Ex02TryCatchFlow {
 

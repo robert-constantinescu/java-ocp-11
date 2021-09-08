@@ -1,7 +1,6 @@
-package dExceptionHandling.m1;
+package dExceptionHandling.m2;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
