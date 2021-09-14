@@ -9,6 +9,8 @@ import eStreamsAndLambdaExpressions.setup.Product;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class FunctionalInterfacesExercise01 {
 
@@ -21,14 +23,15 @@ public class FunctionalInterfacesExercise01 {
      * Implement the method.
      *
      * @param products List of products to filter. (Note: The method should not modify this list).
-     * @param f        Determines which products should be in the result.
+     * @param filter  Determines which products should be in the result.
      * @return A filtered list of products.
      */
-    public List<Product> filterProducts(List<Product> products, /* TODO: Replace 'Object' with a functional interface */ Object f) {
+    public List<Product> filterProducts(List<Product> products, /* TODO: Replace 'Object' with a functional interface */ Predicate<Product> filter) {
         List<Product> result = new ArrayList<>();
 
         // TODO: Implement this method. Loop through the list of products, call 'f' to determine if a product should be
         // in the result list, and put it in the result list if appropriate.
+        result = products.stream().filter(filter).collect(Collectors.toList());
 
         return result;
     }
