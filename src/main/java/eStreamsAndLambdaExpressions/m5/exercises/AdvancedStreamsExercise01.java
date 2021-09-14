@@ -4,6 +4,7 @@ import eStreamsAndLambdaExpressions.setup.Product;
 
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class AdvancedStreamsExercise01 {
 
@@ -15,14 +16,15 @@ public class AdvancedStreamsExercise01 {
      */
     public Set<String> getSortedProductNames(List<Product> products) {
         // TODO: Collect the names of the products into a TreeSet.
-        //
+        return products.stream()
         // Hint: Use the collect() method that takes three functions parameters.
+        .collect(() -> new TreeSet<>(),
+                (set, product) -> set.add(product.getName()),
+                (set1, set2) -> set1.addAll(set2)
+                );
         // What is the purpose of each of these three functions and how do you implement them? (Consult the API documentation).
         // Use method references or lambda expressions to implement the three functions.
 
-//        return products.stream()
-//                .collect(...);
-
-        throw new UnsupportedOperationException("Not yet implemented"); // Remove this line
+//        throw new UnsupportedOperationException("Not yet implemented"); // Remove this line
     }
 }
