@@ -1,7 +1,9 @@
 package eStreamsAndLambdaExpressions.m4.exercises;
 
+import eStreamsAndLambdaExpressions.setup.Category;
 import eStreamsAndLambdaExpressions.setup.Product;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,12 +18,14 @@ public class BasicStreamsExercise04 {
      */
     public Optional<Product> findCheapestCleaning(List<Product> products) {
         // TODO: Look for products that are in the category CLEANING and find the cheapest one.
-        //
+        Optional<Product> result = products.stream()
+                .filter(product -> product.getCategory() == Category.CLEANING)
+                .min(Comparator.comparing(Product::getPrice));
         // Hint: Use a terminal operation to find the cheapest product.
         // Look at the API documentation of interface java.util.stream.Stream, find out which operation would be suitable.
 
-//        return products.stream()...;
+        return result;
 
-        throw new UnsupportedOperationException("Not yet implemented"); // Remove this line
+//        throw new UnsupportedOperationException("Not yet implemented"); // Remove this line
     }
 }

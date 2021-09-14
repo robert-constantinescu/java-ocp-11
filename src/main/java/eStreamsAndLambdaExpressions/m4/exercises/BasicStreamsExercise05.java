@@ -1,5 +1,6 @@
 package eStreamsAndLambdaExpressions.m4.exercises;
 
+import eStreamsAndLambdaExpressions.setup.Category;
 import eStreamsAndLambdaExpressions.setup.Product;
 
 import java.math.BigDecimal;
@@ -17,12 +18,15 @@ public class BasicStreamsExercise05 {
      */
     public boolean areAllOfficeProductsCheap(List<Product> products, BigDecimal priceLimit) {
         // TODO: Look for products in the category OFFICE. Check if all of them cost less than the price limit.
+        return products.stream()
+//        Use two stream operations; one the find the appropriate products,
+                .filter(product -> product.getCategory() == Category.OFFICE)
+//        and another one to check if they all cost less than the price limit.
+                .allMatch(product -> product.getPrice().compareTo(priceLimit) <=0 );
         //
         // Hint: Use two stream operations; one the find the appropriate products,
         // and another one to check if they all cost less than the price limit.
 
-//        return products.stream()...;
-
-        throw new UnsupportedOperationException("Not yet implemented"); // Remove this line
+//        throw new UnsupportedOperationException("Not yet implemented"); // Remove this line
     }
 }
