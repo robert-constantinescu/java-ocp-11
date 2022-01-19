@@ -1,6 +1,5 @@
-package gJavaIOApi.m4.reader;
+package gJavaIOApi.m4ReadWrite.Characters.reader;
 
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;

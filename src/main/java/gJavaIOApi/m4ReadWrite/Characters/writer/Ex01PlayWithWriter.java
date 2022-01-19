@@ -1,4 +1,4 @@
-package gJavaIOApi.m4.writer;
+package gJavaIOApi.m4ReadWrite.Characters.writer;
 
 import java.io.*;
 
